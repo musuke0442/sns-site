@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musuke's Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sns-section.css">
+</head>
+<body>
+    <div class="container">
+        <main class="main">
+            <!-- 上段: Discordプロフィール・SNSリンクと音楽プレイヤーを横並び -->
+            <div class="top-section">
+                <!-- 左側: DiscordプロフィールとSNSリンクを縦並び -->
+                <div class="left-section">
+                    <section class="discord-profile-section">
+                        <div class="discord-profile" id="discordProfile">
+                            <div class="discord-avatar">
+                                <img src="https://via.placeholder.com/80x80/4A90E2/FFFFFF?text=D" alt="Discordアバター" id="discordAvatar">
+                            </div>
+                            <div class="discord-info">
+                                <h3 class="discord-display-name" id="discordDisplayName">musuke</h3>
+                                <p class="discord-username" id="discordUsername">@m.viivii</p>
+                                <div class="discord-status-info">
+                                    <span class="discord-status" id="discordStatus">Loading...</span>
+                                    <span class="discord-activity" id="discordActivity"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SNSリンクセクション -->
+                    <section class="sns-section">
+                        <div class="sns-buttons" id="snsButtons">
+                            <a href="https://instagram.com/m.s.k_vii" class="sns-btn instagram" target="_blank" rel="noopener noreferrer">
+                                <svg class="sns-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3z"/>
+                                </svg>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://discord.gg/KS8px5MeCK" class="sns-btn discord" target="_blank" rel="noopener noreferrer">
+                                <svg class="sns-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0003 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
+                                </svg>
+                                <span>Discord</span>
+                            </a>
+
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 音楽プレイヤー（右側） -->
+                <section class="music-player-section">
+                    <div class="music-player">
+                        <div class="player-info">
+                            <div class="song-info">
+                                <h4 id="song-title">Roundtable Rival</h4>
+                            </div>
+                            <div class="player-controls">
+                                <button id="prev-btn" class="control-btn">⏮</button>
+                                <button id="play-btn" class="control-btn play-btn">▶</button>
+                                <button id="next-btn" class="control-btn">⏭</button>
+                            </div>
+                            <div class="player-progress">
+                                <span id="current-time">0:00</span>
+                                <input type="range" id="progress-bar" min="0" value="0">
+                                <span id="duration">0:00</span>
+                            </div>
+                            <div class="volume-control">
+                                <span>🔊</span>
+                                <input type="range" id="volume-bar" min="0" max="100" value="10">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            </div>
+
+            <!-- 時間表示ウィジェット -->
+            <div class="clock-widget">
+                <div class="clock-display">
+                    <div class="time" id="currentTime">00:00:00</div>
+                    <div class="date-info">
+                        <div class="date" id="currentDate">2025/01/17</div>
+                        <div class="weekday" id="currentWeekday">Friday</div>
+                    </div>
+                    <div class="timezone-controls">
+                        <div class="timezone" id="timezone">JST</div>
+                        <button id="timezoneBtn" class="timezone-btn" title="タイムゾーン変更">🌍</button>
+                    </div>
+                </div>
+                <div class="timezone-selector" id="timezoneSelector" style="display: none;">
+                    <div class="timezone-options">
+                        <!-- アジア・太平洋地域 -->
+                        <div class="timezone-option" data-tz="JST">JST (日本標準時)</div>
+                        <div class="timezone-option" data-tz="KST">KST (韓国標準時)</div>
+                        <div class="timezone-option" data-tz="CST">CST (中国標準時)</div>
+                        <div class="timezone-option" data-tz="IST">IST (インド標準時)</div>
+                        <div class="timezone-option" data-tz="PKT">PKT (パキスタン標準時)</div>
+                        <div class="timezone-option" data-tz="WIB">WIB (西インドネシア時間)</div>
+                        <div class="timezone-option" data-tz="AEST">AEST (オーストラリア東部時間)</div>
+
+                        <!-- 北米地域 -->
+                        <div class="timezone-option" data-tz="EST">EST (東部標準時)</div>
+                        <div class="timezone-option" data-tz="CST_NA">CST (中部標準時)</div>
+                        <div class="timezone-option" data-tz="MST">MST (山岳部標準時)</div>
+                        <div class="timezone-option" data-tz="PST">PST (太平洋標準時)</div>
+                        <div class="timezone-option" data-tz="AKST">AKST (アラスカ標準時)</div>
+                        <div class="timezone-option" data-tz="HST">HST (ハワイ標準時)</div>
+
+                        <!-- ヨーロッパ地域 -->
+                        <div class="timezone-option" data-tz="GMT">GMT (グリニッジ標準時)</div>
+                        <div class="timezone-option" data-tz="CET">CET (中央ヨーロッパ時間)</div>
+                        <div class="timezone-option" data-tz="EET">EET (東ヨーロッパ時間)</div>
+                        <div class="timezone-option" data-tz="MSK">MSK (モスクワ時間)</div>
+
+                        <!-- その他の地域 -->
+                        <div class="timezone-option" data-tz="UTC">UTC (協定世界時)</div>
+                        <div class="timezone-option" data-tz="BRT">BRT (ブラジル時間)</div>
+                        <div class="timezone-option" data-tz="ART">ART (アルゼンチン時間)</div>
+                        <div class="timezone-option" data-tz="SAST">SAST (南アフリカ標準時)</div>
+                        <div class="timezone-option" data-tz="GST">GST (湾岸標準時)</div>
+                        <div class="timezone-option" data-tz="IRST">IRST (イラン標準時)</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="discord.js"></script>
+    <script>
+
+        // 音楽プレイヤー機能
+        class MusicPlayer {
+            constructor() {
+                this.audio = null;
+                this.isPlaying = false;
+                this.currentSongIndex = 0;
+                this.songs = [];
+                this.isUserSeeking = false; // ユーザーがシーク操作中かどうかのフラグ
+
+                this.initializePlayer();
+            }
+
+            async initializePlayer() {
+                await this.loadMusicFiles();
+                this.setupEventListeners();
+                if (this.songs.length > 0) {
+                    this.updateSongInfo();
+                    this.initializeAudio();
+                } else {
+                    this.showNoMusicMessage();
+                }
+            }
+
+            async loadMusicFiles() {
+                try {
+                    // 既知のMP3ファイルリスト（自動検出が機能しない場合のフォールバック）
+                    this.songs = [
+                        {
+                            title: "Por Una Cabeza",
+                            src: "Assets/music/Por Una Cabeza.mp3"
+                        },
+                        {
+                            title: "Roundtable Rival",
+                            src: "Assets/music/Roundtable Rival.mp3"
+                        },
+                        {
+                            title: "Bad Apple!!",
+                            src: "Assets/music/【東方】Bad Apple!! ＰＶ【影絵】.mp3"
+                        },
+                        {
+                            title: "モエチャッカファイア",
+                            src: "Assets/music/【ゼンゼロ】モエチャッカファイア   エレン・ジョー（CV：若山詩音）cover.mp3"
+                        },
+                        {
+                            title: "Pixel Dream",
+                            src: "Assets/music/Snail's House - Pixel Dream.mp3"
+                        }
+                    ];
+
+                    console.log('音楽ファイルリスト:', this.songs);
+                } catch (error) {
+                    console.log('音楽ファイルの読み込みエラー:', error);
+                    this.songs = [];
+                }
+            }
+
+            extractTitleFromPath(path) {
+                // パスからファイル名を抽出してタイトルにする
+                const filename = path.split('/').pop();
+                return filename.replace('.mp3', '').replace(/[-_]/g, ' ');
+            }
+
+            initializeAudio() {
+                if (this.audio) {
+                    this.audio.remove();
+                }
+
+                this.audio = new Audio();
+                this.audio.volume = 0.1; // 初期音量を10%に設定（かなり小さく）
+
+                this.audio.addEventListener('loadedmetadata', () => {
+                    document.getElementById('duration').textContent = this.formatTime(this.audio.duration);
+                    document.getElementById('progress-bar').max = this.audio.duration;
+                });
+
+                this.audio.addEventListener('timeupdate', () => {
+                    document.getElementById('progress-bar').value = this.audio.currentTime;
+                    document.getElementById('current-time').textContent = this.formatTime(this.audio.currentTime);
+                });
+
+                this.audio.addEventListener('ended', () => {
+                    this.nextSong();
+                });
+
+                this.loadSong(this.currentSongIndex);
+            }
+
+            loadSong(index) {
+                if (this.songs.length === 0 || index >= this.songs.length) return;
+
+                const song = this.songs[index];
+                this.audio.src = song.src;
+                this.audio.load();
+            }
+
+            setupEventListeners() {
+                const playBtn = document.getElementById('play-btn');
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+                const progressBar = document.getElementById('progress-bar');
+                const volumeBar = document.getElementById('volume-bar');
+
+                playBtn.addEventListener('click', () => this.togglePlay());
+                prevBtn.addEventListener('click', () => this.previousSong());
+                nextBtn.addEventListener('click', () => this.nextSong());
+                progressBar.addEventListener('input', (e) => this.seekTo(e.target.value));
+                progressBar.addEventListener('mousedown', () => this.isUserSeeking = true);
+                progressBar.addEventListener('mouseup', () => this.isUserSeeking = false);
+                volumeBar.addEventListener('change', (e) => this.setVolume(e.target.value));
+            }
+
+            updateSongInfo() {
+                if (this.songs.length === 0) return;
+
+                const song = this.songs[this.currentSongIndex];
+                document.getElementById('song-title').textContent = song.title;
+            }
+
+            togglePlay() {
+                const playBtn = document.getElementById('play-btn');
+
+                if (this.isPlaying) {
+                    this.pause();
+                    playBtn.textContent = '▶';
+                } else {
+                    this.play();
+                    playBtn.textContent = '⏸';
+                }
+            }
+
+            play() {
+                if (this.audio && this.songs.length > 0) {
+                    this.audio.play();
+                    this.isPlaying = true;
+                }
+            }
+
+            pause() {
+                if (this.audio) {
+                    this.audio.pause();
+                    this.isPlaying = false;
+                }
+            }
+
+            nextSong() {
+                if (this.songs.length === 0 || this.isUserSeeking) return;
+
+                this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
+                this.updateSongInfo();
+                this.loadSong(this.currentSongIndex);
+                if (this.isPlaying) {
+                    this.audio.play();
+                }
+            }
+
+            previousSong() {
+                if (this.songs.length === 0) return;
+
+                this.currentSongIndex = this.currentSongIndex === 0 ? this.songs.length - 1 : this.currentSongIndex - 1;
+                this.updateSongInfo();
+                this.loadSong(this.currentSongIndex);
+                if (this.isPlaying) {
+                    this.audio.play();
+                }
+            }
+
+            seekTo(value) {
+                if (this.audio && this.audio.duration) {
+                    this.audio.currentTime = parseFloat(value);
+                }
+            }
+
+            setVolume(value) {
+                if (this.audio) {
+                    this.audio.volume = value / 100;
+                }
+            }
+
+            formatTime(seconds) {
+                if (isNaN(seconds)) return '0:00';
+
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            showNoMusicMessage() {
+                document.getElementById('song-title').textContent = 'No music files available';
+            }
+        }
+
+        // 時間表示ウィジェット機能
+        class ClockWidget {
+            constructor() {
+                this.timeElement = null;
+                this.dateElement = null;
+                this.weekdayElement = null;
+                this.timezoneElement = null;
+                this.timezoneBtn = null;
+                this.timezoneSelector = null;
+                this.currentTimezone = 'JST';
+                this.timezones = {
+                    // アジア・太平洋地域
+                    'JST': { name: 'JST', label: '日本標準時', offset: '+09:00', region: 'アジア' },
+                    'KST': { name: 'KST', label: '韓国標準時', offset: '+09:00', region: 'アジア' },
+                    'CST': { name: 'CST', label: '中国標準時', offset: '+08:00', region: 'アジア' },
+                    'IST': { name: 'IST', label: 'インド標準時', offset: '+05:30', region: 'アジア' },
+                    'PKT': { name: 'PKT', label: 'パキスタン標準時', offset: '+05:00', region: 'アジア' },
+                    'WIB': { name: 'WIB', label: '西インドネシア時間', offset: '+07:00', region: 'アジア' },
+                    'AEST': { name: 'AEST', label: 'オーストラリア東部時間', offset: '+10:00', region: 'オセアニア' },
+
+                    // 北米地域
+                    'EST': { name: 'EST', label: '東部標準時', offset: '-05:00', region: '北米' },
+                    'CST_NA': { name: 'CST', label: '中部標準時', offset: '-06:00', region: '北米' },
+                    'MST': { name: 'MST', label: '山岳部標準時', offset: '-07:00', region: '北米' },
+                    'PST': { name: 'PST', label: '太平洋標準時', offset: '-08:00', region: '北米' },
+                    'AKST': { name: 'AKST', label: 'アラスカ標準時', offset: '-09:00', region: '北米' },
+                    'HST': { name: 'HST', label: 'ハワイ標準時', offset: '-10:00', region: '北米' },
+
+                    // ヨーロッパ地域
+                    'GMT': { name: 'GMT', label: 'グリニッジ標準時', offset: '+00:00', region: 'ヨーロッパ' },
+                    'CET': { name: 'CET', label: '中央ヨーロッパ時間', offset: '+01:00', region: 'ヨーロッパ' },
+                    'EET': { name: 'EET', label: '東ヨーロッパ時間', offset: '+02:00', region: 'ヨーロッパ' },
+                    'MSK': { name: 'MSK', label: 'モスクワ時間', offset: '+03:00', region: 'ヨーロッパ' },
+
+                    // その他の地域
+                    'UTC': { name: 'UTC', label: '協定世界時', offset: '+00:00', region: '基準' },
+                    'BRT': { name: 'BRT', label: 'ブラジル時間', offset: '-03:00', region: '南米' },
+                    'ART': { name: 'ART', label: 'アルゼンチン時間', offset: '-03:00', region: '南米' },
+                    'SAST': { name: 'SAST', label: '南アフリカ標準時', offset: '+02:00', region: 'アフリカ' },
+                    'GST': { name: 'GST', label: '湾岸標準時', offset: '+04:00', region: '中東' },
+                    'IRST': { name: 'IRST', label: 'イラン標準時', offset: '+03:30', region: '中東' }
+                };
+                this.updateInterval = null;
+
+                this.initializeClock();
+            }
+
+            initializeClock() {
+                this.timeElement = document.getElementById('currentTime');
+                this.dateElement = document.getElementById('currentDate');
+                this.weekdayElement = document.getElementById('currentWeekday');
+                this.timezoneElement = document.getElementById('timezone');
+                this.timezoneBtn = document.getElementById('timezoneBtn');
+                this.timezoneSelector = document.getElementById('timezoneSelector');
+
+                // 保存されたタイムゾーン設定を読み込み
+                this.loadTimezoneSetting();
+
+                this.setupEventListeners();
+                this.updateClock();
+                this.startClock();
+            }
+
+            setupEventListeners() {
+                if (this.timezoneBtn) {
+                    this.timezoneBtn.addEventListener('click', () => this.toggleTimezoneSelector());
+                }
+
+                // タイムゾーンオプションのクリックイベント
+                if (this.timezoneSelector) {
+                    const options = this.timezoneSelector.querySelectorAll('.timezone-option');
+                    options.forEach(option => {
+                        option.addEventListener('click', (e) => {
+                            const timezone = e.target.dataset.tz;
+                            this.setTimezone(timezone);
+                        });
+                    });
+                }
+
+                // クリックアウトサイドでセレクターを閉じる
+                document.addEventListener('click', (e) => {
+                    if (this.timezoneSelector && this.timezoneSelector.style.display === 'block' &&
+                        !this.timezoneSelector.contains(e.target) && !this.timezoneBtn.contains(e.target)) {
+                        this.hideTimezoneSelector();
+                    }
+                });
+            }
+
+            loadTimezoneSetting() {
+                const savedTimezone = localStorage.getItem('selectedTimezone');
+                if (savedTimezone && this.timezones[savedTimezone]) {
+                    this.currentTimezone = savedTimezone;
+                }
+            }
+
+            saveTimezoneSetting() {
+                localStorage.setItem('selectedTimezone', this.currentTimezone);
+            }
+
+            toggleTimezoneSelector() {
+                if (this.timezoneSelector) {
+                    const isVisible = this.timezoneSelector.style.display === 'block';
+                    if (isVisible) {
+                        this.hideTimezoneSelector();
+                    } else {
+                        this.showTimezoneSelector();
+                    }
+                }
+            }
+
+            showTimezoneSelector() {
+                if (this.timezoneSelector) {
+                    this.timezoneSelector.style.display = 'block';
+                    this.updateActiveTimezoneOption();
+                }
+            }
+
+            hideTimezoneSelector() {
+                if (this.timezoneSelector) {
+                    this.timezoneSelector.style.display = 'none';
+                }
+            }
+
+            updateActiveTimezoneOption() {
+                if (this.timezoneSelector) {
+                    const options = this.timezoneSelector.querySelectorAll('.timezone-option');
+                    options.forEach(option => {
+                        if (option.dataset.tz === this.currentTimezone) {
+                            option.classList.add('active');
+                        } else {
+                            option.classList.remove('active');
+                        }
+                    });
+                }
+            }
+
+            setTimezone(timezone) {
+                if (this.timezones[timezone]) {
+                    this.currentTimezone = timezone;
+                    this.saveTimezoneSetting();
+                    this.updateClock();
+                    this.hideTimezoneSelector();
+                    this.updateActiveTimezoneOption();
+                }
+            }
+
+            updateClock() {
+                const now = new Date();
+
+                // 選択されたタイムゾーンの情報を取得
+                const timezoneInfo = this.timezones[this.currentTimezone];
+                if (!timezoneInfo) {
+                    console.error('Unknown timezone:', this.currentTimezone);
+                    return;
+                }
+
+                // オフセットをパース（+09:00形式から時間数を抽出）
+                const offsetMatch = timezoneInfo.offset.match(/([+-])(\d{2}):(\d{2})/);
+                if (!offsetMatch) {
+                    console.error('Invalid offset format:', timezoneInfo.offset);
+                    return;
+                }
+
+                const sign = offsetMatch[1] === '+' ? 1 : -1;
+                const hours = parseInt(offsetMatch[2]);
+                const minutes = parseInt(offsetMatch[3]);
+
+                // UTC時間から選択タイムゾーンの時間を計算
+                const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+                const targetTime = new Date(utcTime + (sign * (hours * 60 * 60 * 1000 + minutes * 60 * 1000)));
+
+                // 時間のフォーマット（24時間制）
+                const timeString = targetTime.toLocaleTimeString('en-US', {
+                    hour12: false,
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                });
+
+                // 日付のフォーマット
+                const dateString = targetTime.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit'
+                });
+
+                // 曜日のフォーマット（英語）
+                const weekdayString = targetTime.toLocaleDateString('en-US', {
+                    weekday: 'long'
+                });
+
+                // 要素に反映
+                if (this.timeElement) {
+                    this.timeElement.textContent = timeString;
+                }
+
+                if (this.dateElement) {
+                    this.dateElement.textContent = dateString;
+                }
+
+                if (this.weekdayElement) {
+                    this.weekdayElement.textContent = weekdayString;
+                }
+
+                if (this.timezoneElement) {
+                    this.timezoneElement.textContent = this.currentTimezone;
+                }
+            }
+
+            startClock() {
+                // 1秒ごとに時間を更新
+                this.updateInterval = setInterval(() => {
+                    this.updateClock();
+                }, 1000);
+            }
+
+            stopClock() {
+                if (this.updateInterval) {
+                    clearInterval(this.updateInterval);
+                    this.updateInterval = null;
+                }
+            }
+        }
+
+        // ページ読み込み時に音楽プレイヤーとDiscordステータスを初期化
+        document.addEventListener('DOMContentLoaded', function() {
+            new MusicPlayer();
+            new DiscordStatusManager();
+
+            // グローバル変数として時間表示ウィジェットインスタンスを保存
+            window.clockWidget = new ClockWidget();
+        });
+    </script>
+</body>
+</html>
